@@ -1,0 +1,41 @@
+proxy_cache_path  /home/evfrosiniya/ask_zerminova/nginx-cache  levels=1:2    keys_zone=STATIC:10m   inactive=24h  max_size=1g;
+
+upstream frontend {
+	server localhost:8000 fail_timeout=0;
+}
+server {
+	listen 80;
+	server_name technoask.ru;
+	root /home/evfrosiniya/ask_zerminova/;
+
+	access_log /var/log/nginx/technoask.ru.access_log;
+   	error_log /var/log/nginx/technoask.ru.error_log;
+	
+	client_max_body_size 15M;
+
+	gzip on;
+	gzip_min_length 1000;
+	gzip_proxied any;
+	gzip_types text/plain text/css application/xml;
+
+	location ^~ /uploads/ {
+    	root /home/evfrosiniya/ask_zerminova/;
+    }
+   
+    location ~*\.(html|css|gif|jpeg|js)$ {
+        root /home/evfrosiniya/ask_zerminova/static/;
+    }
+
+    location / {     
+	proxy_pass http://frontend;   
+	proxy_set_header Host $http_host;
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_cache            STATIC;
+    proxy_cache_valid      200  1d;
+    proxy_cache_use_stale  error timeout invalid_header updating
+    http_500 http_502 http_503 http_504;
+	
+  }
+      
+
+}

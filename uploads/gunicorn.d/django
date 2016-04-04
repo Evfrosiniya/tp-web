@@ -1,0 +1,14 @@
+CONFIG = {
+        'mode': 'wsgi',
+        'working_dir': '/home/evfrosiniya/ask_zerminova',
+        'user': 'root',
+        'args': (
+                '--bind=localhost:8080',
+                '--workers=2',
+                '--timeout=60',
+                '--access-logfile=-',
+				'--error-logfile=-',
+                'ask_zerminova.wsgi:application',
+        ),
+}
+
