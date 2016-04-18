@@ -16,6 +16,9 @@
 	padding-left: 20px;
 	padding-right: 20px;
 }
+.navbar-right {
+	padding-right: 75px;
+}
 
 .question-header {
 	margin-left: 70px;
@@ -32,6 +35,7 @@
 footer{
 	font-style: italic;
 	margin-left: 70px;
+	margin-top: 100px;
 }
 
 .question-main {
@@ -50,8 +54,25 @@ footer{
 
 .vote {
 	padding-top: 15px;
-	
 	margin-top: 20px;
+	text-align: center;
+	font-style: italic;
+
+}
+
+.vote .btn-success {
+	margin-bottom: 5px;
+	margin-top: 0px;
+} 
+
+.vote .btn-default {
+	margin-top: 5px;
+	margin-bottom: 0px
+}
+
+.vote-count-post {
+	margin-top: 100px;
+	margin-bottom: 100px;
 }
 
 .question {
@@ -74,8 +95,8 @@ footer{
 .answer {
 	border: 2px solid #4169E0;
 	border-radius: 10px; 
-
-	margin-top: 20px;
+	margin-top: 30px;
+	margin-bottom: 5px;
 }
 
 .write-answer {
@@ -131,3 +152,9 @@ footer{
 	width: 300px;
 
 }
+
+.pagination {
+	margin-top: 50px;
+	margin-left: 240px;
+}
+

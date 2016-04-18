@@ -47,25 +47,28 @@
   <div class="row">
 
     <div class="col-md-8">
-      <div class="row">
-        <div class="col-md-2"> 
-          <h4 class="login-title">Email</h4>
-        </div>
-        <div class="col-md-10">
-          <input type="email" class="form-control login-box" placeholder="Email address"</label>
-        </div>
-      </div>
+      <form class="form-horizontal" action='' method="POST">
+        <fieldset>
+          <div class="row">
+            <div class="col-md-2">     
+              <h4 class="login-title">Email</h4>
+            </div>
+            <div class="col-md-10">
+              <input type="email" class="form-control login-box" placeholder="Email address" required>
+            </div>
+          </div>
 
-      <div class="row">
-        <div class="col-md-2"> 
-          <h4 class="login-title">Password</h4>
-        </div>
-        <div class="col-md-10">
-         <input type="password" id="inputPassword" class="form-control login-box" placeholder="Password" required>
-        </div>
-      </div>
-      <button type="submit" class="btn ask-btn"  style="margin-left: 280px">Войти</button>
-
+          <div class="row">
+            <div class="col-md-2"> 
+              <h4 class="login-title">Password</h4>
+            </div>
+            <div class="col-md-10">
+              <input type="password" id="inputPassword" class="form-control login-box" placeholder="Password">
+            </div>
+          </div>
+          <button type="submit" class="btn ask-btn"  style="margin-left: 280px">Войти</button>
+        </fieldset>
+      </form>
     </div>
 
 
