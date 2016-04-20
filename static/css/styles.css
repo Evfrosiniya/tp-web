@@ -115,11 +115,6 @@ footer{
 
 .question-new-box {
 	margin-top: 20px;
-	margin-left: 30px;
-}
-
-.question-new-title {
-	margin-left: 70px;
 }
 
 .login-box {
@@ -128,7 +123,6 @@ footer{
 	width: 300px;
 }
 .login-title {
-	margin-left: 70px;
 	margin-top: 30px;
 }
 .ask-btn{
@@ -141,7 +135,6 @@ footer{
 }
 
 .signup-title {
-	margin-left: 70px;
 	margin-top: 30px;
 }
 
@@ -155,6 +148,5 @@ footer{
 
 .pagination {
 	margin-top: 50px;
-	margin-left: 240px;
 }
 
