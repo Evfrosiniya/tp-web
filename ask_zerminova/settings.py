@@ -56,9 +56,6 @@ WSGI_APPLICATION = 'ask_zerminova.wsgi.application'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            '/home/evfrosiniya/ask_zerminova/',
-        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,6 +67,9 @@ TEMPLATES = [
         },
     },
 ]
+TEMPLATE_DIRS = (
+    BASE_DIR + '/templates',
+)
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 

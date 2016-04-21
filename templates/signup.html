@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block content_header %}<h1 class="question-title">Регистрация</h1>{% endblock %}
+
+<div class="question-body">
+  <div class="row">
+    <div class="col-md-8">
+      <form class="form-horizontal" action='' method="POST">
+        <fieldset>
+          <div class="row">
+            <div class="col-md-2"> 
+              <h4 class="signup-title">Логин</h4>
+            </div>
+            <div class="col-md-10">
+              <input type="text" class="form-control signup-box" placeholder="Имя пользователя">
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-md-2"> 
+              <h4 class="signup-title">Email</h4>
+            </div>
+            <div class="col-md-10">
+              <input type="email" class="form-control signup-box" placeholder="Адрес электронной почты" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2"> 
+              <h4 class="signup-title">Пароль</h4>
+            </div>
+            <div class="col-md-10">
+             <input type="password" id="inputPassword" class="form-control signup-box" placeholder="Пароль">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2"> 
+              <h4 class="signup-title">Подтверждение пароля</h4>
+            </div>
+            <div class="col-md-10">
+             <input type="password" id="inputPassword" class="form-control signup-box" placeholder="Пароль">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-2"> 
+              <h4 class="signup-title">Аватар</h4>
+            </div>
+            <div class="col-md-10">
+              <input type="file" id="exampleInputFile" class="signup-box">
+            </div>
+          </div>
+
+          <button type="submit" class="btn ask-btn"  style="margin-left: 280px">Зарегестрироваться</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}

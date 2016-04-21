@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+{% block content_header %}<h1 class="question-title">Новый вопрос</h1>{% endblock %}
+
+<div class="row">
+  <div class="col-md-2"> 
+    <h3 class="question-new-title">Тема</h3>
+  </div>
+  <div class="col-md-10">
+    <textarea class="form-control question-new-box"rows="1" placeholder="Тема"></textarea>  
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2"> 
+    <h3 class="question-new-title">Вопрос</h3>
+  </div>
+  <div class="col-md-10">
+    <textarea class="form-control question-new-box"rows="10" placeholder="Вопрос"></textarea>  
+  </div>
+</div>
+      
+<div class="row">
+  <div class="col-md-2"> 
+    <h3 class="question-new-title">Тэги</h3> 
+  </div>
+  <div class="col-md-10">
+    <textarea class="form-control question-new-box"rows="1" placeholder="Тэги"></textarea>  
+  </div>
+  <button type="submit" class="btn ask-btn">Задать вопрос</button>
+</div>
+{% endblock content %}

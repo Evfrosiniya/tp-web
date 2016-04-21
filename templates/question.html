@@ -1,0 +1,85 @@
+{% extends 'index.html' %}
+{% block content %}
+{% block content_header %}<h1 class="question-title">Вопрос:</h1>{% endblock %}
+
+      <div class="row">
+        <div class="col-md-1"> 
+          <div class="vote">
+            <button type="button" class="btn btn-success" aria-label="Left Align">
+              <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+            </button>
+            <span itemprop="upvoteCount" class="vote-count-post">100</span>
+            <button type="button" class="btn btn-danger" aria-label="Left Align">
+               <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-11 question">
+          <div class="col-md-2 question-avatar"> 
+            <img alt="Avatar" src="http://st.kp.yandex.net/images/actor_iphone/iphone360_16564.jpg" class="img-thumbnail" width="60px" height="30px">  
+          </div>
+          <div class="col-md-9 question-question">
+            <h4 class="question-post-title"><a href="#">Стажировка в Mail.ru</a></h4>
+            <p>Я очень хочу пройти стажировку в Mail.ru. Я пишу на таких языках программирования, как С, С++, Python. Как мне попасть в команду Mail.ru?</p>
+            <div class="row">
+              <div class="col-md-4 question-main-post-answer">
+                <a href="#">ответов(15)</a> 
+              </div>
+              <div class="col-md-8 question-main-post-tags">
+                <p>Тэги: <a href="#">Mail.ru</a> <a href="#">C++</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="answers-header">
+        <h2 class="answers-title">Ответы:</h2>
+      </div>
+    
+    {% for x in '123' %}
+      <div class="row">
+        <div class="col-md-1"> 
+          <div class="vote">
+             <button type="button" class="btn btn-success" aria-label="Left Align">
+              <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+            </button>
+            <span itemprop="upvoteCount" class="vote-count-post ">10</span>
+            <button type="button" class="btn btn-danger" aria-label="Left Align">
+               <span class="glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-11 answer">
+          <div class="col-md-2 question-avatar"> 
+            <img alt="Avatar" src="http://missingkidsnews.com/images/internet/missing2.png" class="img-thumbnail" width="60px" height="30px">  
+          </div>
+          <div class="col-md-9 question-answer">
+            <h4 class="question-post-title"><a href="#">Ответ №1</a></h4>
+            <p>Для этого, Вам необходимо ...</p>
+            <div class="col-md-4 correct-answer">
+              <p><input type="checkbox" class="checkbox-right"> Верный ответ!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+
+{% endblock content %}
+{% block footer_form %}
+
+      <div class="row write-answer">
+        <div class="col-md-1"> 
+        </div>
+        <div class="col-md-11">
+          <div class="col-md-10">
+            <textarea class="form-control" rows="3" placeholder="Ответить"></textarea>
+          </div>
+          <div lass="col-md-2">
+            <button type="button" class="btn btn-warning">
+              <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+{% endblock %}
