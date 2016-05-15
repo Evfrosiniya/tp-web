@@ -12,7 +12,13 @@ def paginate(object_list, objects_count, page_num):
     return objects_page
 
 def index(request, page = 1):
-    questions = Question.manager.new()
+    questions = []
+    for i in xrange(1,30):
+        questions.append({
+            'title': 'title' + str(i),
+            'id': i,
+            'text': 'text' + str(i),
+        })
     questions = paginate(questions, 5, page)
     return render(request, 'index.html', {
         'objects': questions,
@@ -21,7 +27,13 @@ def index(request, page = 1):
     })
 
 def hot_index(request, page = 1):
-    questions = Question.manager.hot()
+    questions = []
+    for i in xrange(1,15):
+        questions.append({
+            'title': 'title' + str(i),
+            'id': i,
+            'text': 'text' + str(i),
+        })
     questions = paginate(questions, 5, page)
     return render(request, 'hot.html', {
                 'objects': questions,
@@ -29,8 +41,14 @@ def hot_index(request, page = 1):
         'url_prefix': '/hot'
         })
 
-def tag_index(request, tag, page = 1):
-    questions = Question.manager.by_tags(tag)
+def tag_index(request, page = 1):
+    questions = []
+    for i in xrange(1,15):
+        questions.append({
+            'title': 'title' + str(i),
+            'id': i,
+            'text': 'text' + str(i),
+        })
     questions = paginate(questions, 5, page)
     return render(request, 'tag.html', {
                 'objects': questions,
@@ -47,9 +65,14 @@ def login(request):
 def ask(request):
     return render(request, 'ask.html')
 
-def question(request, question_id,  page = 1):
-    answers = Answer.manager.by_id(question_id)
-    question = Question.manager.by_id(question_id)
+def question(request, page = 1):
+    answers = []
+    for i in xrange(1,10):
+        answers.append({
+            'title': 'title' + str(i),
+            'id': i,
+            'text': 'text' + str(i),
+        })
     answers = paginate(answers, 3, page)
     return render(request, 'question.html', {
                 'objects': answers,
