@@ -22,7 +22,7 @@ SECRET_KEY = 'er%1+^2s7ewna0lhy0t76=x$*etk#qocx!^=x%-o%q!21$*jjq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
+#TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = []
 
@@ -56,6 +56,9 @@ WSGI_APPLICATION = 'ask_zerminova.wsgi.application'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(BASE_DIR,'templates'),
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,9 +70,6 @@ TEMPLATES = [
         },
     },
 ]
-TEMPLATE_DIRS = (
-    BASE_DIR + '/templates',
-)
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
